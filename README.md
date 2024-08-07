@@ -28,3 +28,4 @@ Your TA will be one of these:
 
 ## Weekly Stand-Up Time
 - [Place holder for the assigned time for the weekly stand up with TA]
+
