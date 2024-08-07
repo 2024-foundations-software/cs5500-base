@@ -20,8 +20,19 @@ weeks=(
 
 # Loop through the array and create each file
 for week in "${weeks[@]}"; do
-    filename="${week// /%20}.md"  # Replace spaces with %20 for the filename
-    echo "# $week" > "$filename"  # Create the file with the title as the first line
+    filename="${week// /-}.md"  # Replace spaces with - for the filename and prefix with StandUpDocuments/
+    {
+        echo "# $week"
+        echo ""
+        echo "## Accomplishments"
+        echo "[Please add details]"
+        echo ""
+        echo "## Working on"
+        echo "[Please add details]"
+        echo ""
+        echo "## Risks"
+        echo "[Please add details]"
+    } > "$filename"  # Create the file with the title and headings
 done
 
 echo "Markdown documents created successfully."
