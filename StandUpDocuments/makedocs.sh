@@ -20,6 +20,13 @@ weeks=(
 
 # Loop through the array and create each file
 for week in "${weeks[@]}"; do
+
+    # Check if the file already exists
+    if [ -e "$filename" ]; then
+        echo "Error: File $filename already exists. Exiting."
+        exit 1
+    fi
+
     filename="${week// /-}.md"  # Replace spaces with - for the filename and prefix with StandUpDocuments/
     {
         echo "# $week"
